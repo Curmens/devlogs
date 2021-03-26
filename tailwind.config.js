@@ -17,17 +17,17 @@ module.exports = {
 
         backgroundColor: {
             'primary': '#070B0D',
-            'secondary': '#82DD03',
+            'secondary': '#2069e0',
             'danger': '#222831',
         },
 
         textColor: {
             'primary': '#ffffff',
             'secondary': '#070B0D',
-            'danger': '#82DD03',
-            'danger-500': '#82dd03be',
+            'danger': '#2069e0',
+            'danger-500': '#2069e0be',
         },
-        
+
         fontFamily: {
             'display': ['Roboto', 'Space Mono', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],        
             'body': ['Roboto', 'Space Mono', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],

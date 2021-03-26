@@ -1,7 +1,7 @@
-<template>
+<template> 
   <div class="home bg-primary p-12">
     <div class="container data-main">
-      <form action="" class="form-container">
+      <form action="" class="form-container" v-on:submit.prevent="userdata" method="POST">
         <div class="logo">
           <svg width="86px" height="80px" viewBox="0 0 256 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
             <g>
@@ -10,7 +10,7 @@
           </svg>
         </div>
         <h3 class="text-banner text-primary text-lg py-9">Find Your GitHub Stats</h3>
-        <input class="input-data rounded p-3 text-danger-500 bg-danger text-center" placeholder="username">
+        <input class="input-data rounded p-3 text-danger-500 bg-danger text-center" placeholder="username" v-model="username">
       </form>
     </div>
   </div>
@@ -19,7 +19,24 @@
 <script>
 export default {
   name: 'Home',
+  data(){
+    return {
+      username: ''
+    }
+  },
+
   components: {
+  },
+
+  methods:{
+    userdata(){
+      this.$store.dispatch('getUserData', {
+        username: this.username
+      })
+      .then(() => {
+        this.$router.push({ name: 'Dashboard' })
+      })
+    }
   }
 }
 </script>
@@ -30,7 +47,7 @@ export default {
 }
 
 .profile-logo{
-  fill: #82DD03
+  fill: #2069e0 
 }
 
 .form-container{
