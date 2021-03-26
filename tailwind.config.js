@@ -23,9 +23,10 @@ module.exports = {
 
         textColor: {
             'primary': '#ffffff',
+            'info': '#c8e1ff',
             'secondary': '#070B0D',
             'danger': '#2069e0',
-            'danger-500': '#2069e0be',
+            'danger-500': '#c8e1ff',
         },
 
         fontFamily: {
